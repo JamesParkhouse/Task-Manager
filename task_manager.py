@@ -1,6 +1,6 @@
-# A program that takes login credentials from a user, presents a 
-# menu of task management options, and executes appropriate actions for
-# the selected option. 
+'''A program that takes login credentials from a user, presents a 
+menu of task management options, and executes appropriate actions for
+the selected option.'''
 
 #====Login Section====
 
@@ -30,13 +30,15 @@ while True:
 while True:
     # Present the menu to the user and 
     # make sure that the user input is converted to lower case.
-    menu = input('''Select one of the following options:
-r - register a user
-a - add task
-va - view all tasks
-vm - view my tasks
-e - exit
-: ''').lower()
+    menu = input('''
+Select one of the following options:
+    r - register a user
+    a - add task
+    va - view all tasks
+    vm - view my tasks
+    e - exit
+
+Enter selection: ''').lower()
     
     if menu == 'r':
         # Take user inputs for new user details. Confirm password before 
@@ -93,7 +95,7 @@ e - exit
         Task description:\n\t {task_details[2]}\n''')
             
     elif menu == 'e':
-        print('Goodbye!!!')
+        print('Exiting program. Goodbye.')
         exit()
 
     else:
